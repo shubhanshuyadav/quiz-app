@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #00A19D;
+}
+#main-container{
+    margin: 0 auto;
+    width: 50vw;
+    height: 40vh;
+    background:#FFF8E5;
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+}
+ .btn{
+     position: absolute;
+     right: 5%;
+     bottom: 10%;
+     width: 5rem;
+ }
+
+ .option{
+     font-size: 1.5rem;
+     font-family: 'Alegreya', serif;
+    }
+
+ h1{
+    font-family: 'Acme', sans-serif;
+ }

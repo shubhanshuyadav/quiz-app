@@ -1,3 +1,4 @@
-import * as data from './questions.js';
-console.log("hello");
-console.log(data);
+let data=JSON.parse(questions);
+for(let question in data){
+    document.getElementById("quetions")
+}
