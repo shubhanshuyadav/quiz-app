@@ -8,41 +8,57 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Acme&family=Alegreya&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Alegreya&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="questions.json"></script>
+    <script type="text/javascript" src="index.js"></script>
     <title>Quiz-app</title>
+
   </head>
   <body>
-        <div id="main-container" class="shadow-lg p-3 mb-5 bg-white rounded d-flex flex-column container-fluid ">
-            <h1 id="timer"></h1>
+      <div id="welcome-screen" class="shadow-lg p-3 mb-5 bg-white rounded container-fluid text-center" style="
+        margin: 0 auto;
+      width: 40vw;
+      height: 30vh;
+      background:#FFF8E5;
+      position: absolute;
+      top: 25vh;
+      left: 25vw;">
+          <h1 class="pt-4 ">Let's start the quiz...</h1>
+          <button id="start-btn" type="button" class="btn btn-success mt-4" onclick="startQuiz()">Start</button>
+      </div>
+
+      <h1 id="timer" class="text-center pt-5rem"></h1>
+
+        <div id="main-container" class="shadow-lg p-3 mb-5 bg-white rounded container-fluid">
                 <h1 id="question">Hello how are you</h1>
-                    <form action="#">
-                        <div id="options">
-                            <div class="option">
-                                <input type="radio" id="a" name="fav_language" value="a">
-                                <label for="a">Fine</label>
+                    <form class="pb-5" action="#">
+                            <div class="option-lable">
+                                <input type="radio" id="A" name="qus-option" value="a">
+                                <label id="a" for="A">Fine</label>
                             </div>
-                            <div class="option">
-                                <input type="radio" id="b" name="fav_language" value="b">
-                                <label for="b">Fine</label>
+                            <div class="option-lable">
+                                <input type="radio" id="B" name="qus-option" value="b">
+                                <label id="b"for="B">Fine</label>
                             </div>
-                            <div class="option">
-                                <input type="radio" id="c" name="fav_language" value="c">
-                                <label for="c">Great</label><br>
+                            <div class="option-lable">
+                                <input type="radio" id="C" name="qus-option" value="c">
+                                <label id="c" for="C">Great</label><br>
                             </div>
-                            <div class="option">
-                                <input type="radio" id="d" name="fav_language" value="d">
-                                <label for="d">Not Well</label><br>
+                            <div class="option-lable">
+                                <input type="radio" id="D" name="qus-option" value="d">
+                                <label id="d" for="D">Not Well</label><br>
                             </div>
-                        </div>  
-                    </form>
-                <button type="button" class="btn btn-primary btn-sm">Next</button>
+                    </form><br>
+                <button  id="prev-btn" type="button" class="btn btn-outline-danger btn-sm">Previous</button>
+                <button  id="next-btn" type="button" class="btn btn-primary btn-sm">Next</button>
             </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
+
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
