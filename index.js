@@ -46,7 +46,7 @@ let getUserAnswer=function(){
             return qusOptions[i].value;
         }
     }
-    return null;
+    return "";
 }
 
 let displayButtons=function(questionIndex){
@@ -67,18 +67,27 @@ let displayButtons=function(questionIndex){
 let displayQuestion =function(questionIndex){
         if(questionIndex<questionSet.length && questionIndex>=0){
             document.getElementById("question").innerHTML=questionSet[questionIndex].question;
-            let options=questionSet[questionIndex].options
+            let options=questionSet[questionIndex].options;
+            if(questionSet[questionIndex].userAnswer!=""){
+                document.getElementById('option-'+questionSet[questionIndex].userAnswer).checked=true;
+            }else{
+                for(let option in options ){
+                    document.getElementById('option-'+option).checked=false;
+                }
+            }
             for(let option in options ){
                 document.getElementById(option).innerHTML=options[option];
             }
         }
-        displayButtons(questionIndex)        
+        displayButtons(questionIndex);       
 }
 
 let buttonEventLisners=function(currentQuestionIndex){
     document.getElementById("next-btn").addEventListener("click",function(){
         let answer=questionSet[currentQuestionIndex].answer;
         let answerByUser=getUserAnswer();
+        questionSet[currentQuestionIndex].userAnswer=getUserAnswer();
+        console.log(questionSet[currentQuestionIndex].userAnswer);
         if(answerByUser){
             noOfAnsweredQus++;
         }
