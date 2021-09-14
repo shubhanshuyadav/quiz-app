@@ -4,8 +4,9 @@
 }
 body{
     background: #00A19D;
+    word-break: break-all;
 }
-#main-container, #welcome-screen{
+#qus-container, #welcome-screen,#score-card{
     margin: 0 auto;
     width: 50vw;
     height: auto;
@@ -15,15 +16,21 @@ body{
     left: 25vw;
 }
 
-#main-container{
+#main-container,#score-card{
     display: none;
 }
 
- #next-btn, #prev-btn{
+ #next-btn, #prev-btn,#submit-btn,#quit-btn{
      position: absolute;
      right: 5%;
      bottom: 10%;
      width: 5rem;
+ }
+
+ #quit-btn{
+     margin-top: 2rem;
+     left: 48.5%;
+     bottom:15% ;
  }
 
  #prev-btn{
@@ -35,7 +42,7 @@ body{
      background: #FFB830;
      position: absolute;
      top: 15vh;
-     left: 45vw;
+     left: 45%;
      border-radius: 5px;
  }
 
@@ -46,4 +53,54 @@ body{
 
  h1{
     font-family: 'Acme', sans-serif;
+ }
+ 
+ @media (max-width: 480px) {
+
+     h1{
+         font-size: 1.5rem;
+     }
+    .option-lable{
+        font-size: 1rem;
+    }
+    #next-btn, #prev-btn,#submit-btn,#quit-btn{
+        width: 4rem;
+        font-size: 0.6rem;
+    }
+    #timer{
+        width: 5rem;
+        left: 40%;
+    }
+    #timer h1{
+        font-size: 1rem;
+
+    }
+    #quit-btn{
+        margin-top: 2rem;
+        left: 40%;
+        bottom:10%;
+    }
+    
+  }
+
+  @media (max-width: 280px) {
+    h1{
+        font-size: 1rem;
+    }
+   .option-lable{
+       font-size: 0.6rem;
+   }
+   #next-btn, #prev-btn,#submit-btn,#quit-btn{
+       width: 2rem;
+       font-size: 0.4rem;
+   }
+   #timer{
+       width: 3rem;
+   }
+   #timer h1{
+       font-size: 0.8rem;
+   }
+   #quit-btn{
+    bottom:5%;
+}
  }

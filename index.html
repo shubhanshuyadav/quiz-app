@@ -28,32 +28,46 @@
           <h1 class="pt-4 ">Let's start the quiz...</h1>
           <button id="start-btn" type="button" class="btn btn-success mt-4" onclick="startQuiz()">Start</button>
       </div>
+      <div id="main-container">
+        <h1 id="timer" class="text-center pt-5rem"></h1>
+        <div id="qus-container" class="shadow-lg p-3 mb-5 bg-white rounded container-fluid">
+            <h1 id="question">Hello how are you</h1>
+                <form class="pb-5" action="#">
+                  <div>
+                    <div class="option-lable" >
+                      <input type="radio" id="A" name="qus-option" value="a">
+                      <label id="a" for="A">Fine</label>
+                  </div>
+                  <div class="option-lable">
+                      <input type="radio" id="B" name="qus-option" value="b">
+                      <label id="b"for="B">Fine</label>
+                  </div>
+                  <div class="option-lable">
+                      <input type="radio" id="C" name="qus-option" value="c">
+                      <label id="c" for="C">Great</label><br>
+                  </div>
+                  <div class="option-lable">
+                      <input type="radio" id="D" name="qus-option" value="d">
+                      <label id="d" for="D">Not Well</label><br>
+                  </div>
+                  </div>    
+                </form><br>
+            <button  id="prev-btn" type="button" class="btn btn-outline-danger btn-sm">Previous</button>
+            <button  id="next-btn" type="button" class="btn btn-primary btn-sm">Next</button>
+            <button type="button" id="submit-btn" class="btn btn-success btn-sm">Submit</button>
+        </div>
+           <button id="quit-btn" class="btn btn-danger btn-sm">Quit</button>
+      </div>
 
-      <h1 id="timer" class="text-center pt-5rem"></h1>
+      <div id="score-card" class="shadow-lg p-3 mb-5 bg-white rounded container-fluid text-center">
+          <h1 id="score-text"class="pt-4 ">Let's start the quiz...</h1>
+          <button id="retake-btn" type="button" class="btn btn-success mt-4"  onClick="window.location.reload();">Retake</button>
+      </div>
 
-        <div id="main-container" class="shadow-lg p-3 mb-5 bg-white rounded container-fluid">
-                <h1 id="question">Hello how are you</h1>
-                    <form class="pb-5" action="#">
-                            <div class="option-lable">
-                                <input type="radio" id="A" name="qus-option" value="a">
-                                <label id="a" for="A">Fine</label>
-                            </div>
-                            <div class="option-lable">
-                                <input type="radio" id="B" name="qus-option" value="b">
-                                <label id="b"for="B">Fine</label>
-                            </div>
-                            <div class="option-lable">
-                                <input type="radio" id="C" name="qus-option" value="c">
-                                <label id="c" for="C">Great</label><br>
-                            </div>
-                            <div class="option-lable">
-                                <input type="radio" id="D" name="qus-option" value="d">
-                                <label id="d" for="D">Not Well</label><br>
-                            </div>
-                    </form><br>
-                <button  id="prev-btn" type="button" class="btn btn-outline-danger btn-sm">Previous</button>
-                <button  id="next-btn" type="button" class="btn btn-primary btn-sm">Next</button>
-            </div>
+       
+
+            
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
